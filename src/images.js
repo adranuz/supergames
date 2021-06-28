@@ -1,0 +1,22 @@
+
+
+
+import './static/apex.jpg'
+import './static/avatar.jpg'
+import './static/cover.jpg'
+import './static/crash.jpg'
+import './static/cuphead.jpg'
+import './static/cyberpunk-2077.jpg'
+import './static/ff.jpg'
+import './static/final-fantasy.jpg'
+import './static/fortnite.jpg'
+import './static/galeria1.jpg'
+import './static/galeria2.jpg'
+import './static/galeria3.jpg'
+import './static/galeria4.jpg'
+import './static/intro.jpg'
+import './static/logo--footer.svg'
+import './static/logo--header.svg'
+import './static/rdr2.jpg'
+import './static/xbox.jpg'
+import './static/zelda.jpg'
