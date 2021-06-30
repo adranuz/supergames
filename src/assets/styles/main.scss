@@ -1,0 +1,27 @@
+// utils
+@import "utils/variables.scss";
+@import "utils/mixins.scss";
+@import "utils/grids.scss";
+@import "utils/breakpoints.scss";
+
+// base
+@import "base/bootstrap_reboot";
+@import "base/base.scss";
+
+// layout
+@import "layout/headers.scss";
+@import "layout/footers.scss";
+
+// components
+@import "components/perfiles.scss";
+@import "components/estadisticas.scss";
+@import "components/ubicaciones.scss";
+@import "components/galerias.scss";
+@import "components/articulos.scss";
+@import "components/intros.scss";
+@import "components/cajas.scss";
+@import "components/buscadores.scss";
+@import "components/filtros.scss";
+
+// pages
+@import "pages/_homepage.scss";

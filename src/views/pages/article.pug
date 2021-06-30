@@ -1,12 +1,12 @@
-extend components/plantilla.pug
+extend ../components/plantilla.pug
 block contenidos
 	section.intro
-		.intro__imagen: img(src="../static/intro.jpg")
+		.intro__imagen: img(src=ruta+"intro.jpg")
 		.intro__contenido
 			span.intro__categoria Noticias
 			h1.intro__titulo Cyberpunk 2077 tiene tres prólogos distintos
 		.intro__autor
-			img(src="../static/avatar.jpg")
+			img(src=ruta+"avatar.jpg")
 			span.intro__autor-titulo Autor
 			span.intro__autor-nombre John Wick
 	article.articulo--principal

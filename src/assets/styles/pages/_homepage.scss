@@ -1,0 +1,15 @@
+.contenedor--home {
+  width: 1300px;
+  height: auto;
+  margin: auto;
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(100px, 18rem);
+  gap: 20px;
+}
+
+.banner--homepage {
+  grid-column: span 1;
+  grid-row: span 2;
+  border: 1px solid red;
+}

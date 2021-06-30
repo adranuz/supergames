@@ -1,4 +1,8 @@
-import "./styles/main.scss"
+import "./assets/styles/main.scss"
 // import "./images.js"
-console.log('holo')
+(function () {
+  console.log("The app is runing")
+
+  require('./assets/scripts/demo')
+})();
 

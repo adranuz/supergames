@@ -1,11 +1,14 @@
+-let ruta = "assets/images/";
+
 header.header--principal
-	.logo.logo--header: img(src="../static/logo--header.svg")
+
+	a(href="/").logo.logo--header: img(src=ruta+"logo--header.svg")
 	nav.nav--header: ul
 		li: a(href="#") Playstation
 		li: a(href="#") Xbox
 		li: a(href="#") Nintendo
 		li: a(href="#") PC
 		li: a(href="#") Mobile
-	a(href="#" class="header__busqueda")
+	a(href="/search").header__busqueda
 		i.fas.fa-search
 		span Search
