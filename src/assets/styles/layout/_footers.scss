@@ -1,12 +1,24 @@
 .footer--principal {
 	display: flex;
+	flex-direction: column;
 	height: 160px;
 	margin-top: 30px;
 	padding: 0 20px 20px 20px;
 	background-color: $color-primario;
+	.logo--footer {
+		margin: auto;
+	}
+
+	@include media(desktop-s){
+		flex-direction: initial;
+		.logo--footer {
+			margin: initial;
+		}
+	}
 }
 .nav--footer ul {
-	display: flex;
+	display: none;
+	// display: flex;
 	padding-top: 35px;
 	li {
 		list-style: none;
@@ -16,9 +28,17 @@
 		color: $color-claro;
 		@include titulos($Fuente2);
 	}
+
+	@include media(desktop-l){
+		display:flex;
+	}
 }
 .nav--social {
-	margin-left: auto;
+	margin: auto;
+	padding-right: 1.5rem;
+	.title {
+		display: none;
+	}
 	ul {
 		display: flex;
 		padding-top: 35px;
@@ -31,5 +51,13 @@
 	a {
 		color: $color-claro;
 		@include titulos($Fuente2);
+	}
+
+	@include media(desktop-s){
+		margin: initial;
+		margin-left: auto;
+		.title {
+			display: initial;
+		}
 	}
 }

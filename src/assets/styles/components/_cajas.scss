@@ -40,29 +40,33 @@
 	background: get-opacity($color-primario, .5);
 	padding: 30px;
 	display: grid;
+	border-radius: 2px;
+	box-shadow: 1px 1px rbga(0,0,0, .1);
 
 
 	.caja__imagen {
 		z-index: -1;
+		width: 105%;
 		@include position-absolute;
 
 		img {
 			width: 100%;
-			height: 100%;
 		}
 	}
+
 	&__contenido {
 		color: $color-claro;
 		h2 {
-			width: 16rem;
 			@include font-size(25px);
 		}
 	}
+	
 	&__categoria {
 		display: inline-block;
-		width: 100px;
+		min-width: 120px;
 		height: 30px;
 		margin-bottom: 0.5rem;
+		border-radius: 30px;
 		text-align: center;
 		background: $color-secundario;
 		@include titulos($Fuente2)
@@ -77,8 +81,9 @@
 				color: $color-claro;
 				list-style: none;
 				display: inline;
-				margin-right: 20px;
+				margin-right: 4px;
 				@include font-size(16px);
+
 				span {
 					margin: 0 0.5rem;
 				}
@@ -87,11 +92,12 @@
 	} 
 }
 .caja--grande {
-  grid-column: span 3;
   grid-row: span 2;
-	padding: 30px 18%;
 	text-align: center;
 	align-items: center;
+	.caja__imagen {
+		width: 1018px;
+	}
 	h2 {
 		width: auto;
 		@include titulos($Fuente2);
@@ -99,16 +105,37 @@
 	}
 	p {
 		padding: 0 4rem;
+		display:none;
 	}
 	.caja--con-fondo__contenido {
 		padding-top: 2rem;
 	}
+	@media(min-width: 537px){
+		grid-column: span 2;
+		p {
+			display: block;
+		}
+	}
+	@media(min-width: 807px){
+		grid-column: span 3;
+	}
+
 }
 .caja--pequena {
   grid-column: span 1;
   grid-row: span 1;
+	.caja__imagen {
+		width:318px;
+		min-width: 100%;
+	}
 }
 .caja--mediana {
-  grid-column: span 2;
+  // grid-column: span 2;
   grid-row: span 1;
+	@media(min-width: 537px){
+		grid-column: span 2;
+	}
+	.caja__imagen {
+		width:658px;
+	}
 }

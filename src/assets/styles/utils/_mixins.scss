@@ -40,11 +40,10 @@
 		margin: 0;
   }
 }
-@mixin position-absolute($top:0, $right:0, $left:0, $bottom:0) {
+@mixin position-absolute() {
 	position: absolute;
-	top:$top;
-	right: $right;
-	left: $left;
-	bottom: $bottom;
+	top:50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
 }
 
