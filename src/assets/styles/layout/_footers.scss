@@ -1,25 +1,26 @@
 .footer--principal {
 	display: flex;
 	flex-direction: column;
-	height: 160px;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	height: auto;
+	margin: initial;
 	margin-top: 30px;
 	padding: 0 20px 20px 20px;
 	background-color: $color-primario;
-	.logo--footer {
-		margin: auto;
-	}
 
-	@include media(desktop-s){
-		flex-direction: initial;
-		.logo--footer {
-			margin: initial;
-		}
+	@include media(tablet){
+		flex-direction: row;
 	}
 }
 .nav--footer ul {
-	display: none;
-	// display: flex;
+	display: flex;
 	padding-top: 35px;
+	padding-left: 0;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
 	li {
 		list-style: none;
 		margin-right: 50px;
@@ -29,19 +30,18 @@
 		@include titulos($Fuente2);
 	}
 
-	@include media(desktop-l){
-		display:flex;
+	@include media(tablet){
+		flex-direction: row;
 	}
+	
 }
 .nav--social {
-	margin: auto;
 	padding-right: 1.5rem;
-	.title {
-		display: none;
-	}
+	
 	ul {
 		display: flex;
 		padding-top: 35px;
+		padding-left: 0;
 	}
 	li {
 		list-style: none;
@@ -55,9 +55,5 @@
 
 	@include media(desktop-s){
 		margin: initial;
-		margin-left: auto;
-		.title {
-			display: initial;
-		}
 	}
 }
