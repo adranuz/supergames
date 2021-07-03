@@ -1,42 +1,98 @@
 .header--principal {
-	display: flex;
-	padding: 0 20px 20px 20px;
-	margin-bottom: 20px;
-	width: 100%;
-	height: 90px;
-	border-bottom: 1px solid #ebebeb;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 20px 20px 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 90px;
+  border-bottom: 1px solid #ebebeb;
+  position: relative;
 }
-.nav--header ul {
-	display: none;
-	padding-top: 35px;
-	li {
-		list-style: none;
-		margin-right: 50px;
-	}
-	a {
-		color: $color-variacion;
-		@include titulos($Fuente2);
-	}
+.nav--header {
+  display: none;
+  position: absolute;
+  top: 75%;
+  right: 20px;
+  &:hover {
+    display: flex;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 
-	@include media(desktop-s){
-		display:flex;
-	}
+    // left:0;}}
+    z-index: 1;
+    // padding-top: 35px;
+    background: get-opacity($color-variacion, 0.4);
+    margin: 0;
+    padding: 20px;
+
+    li {
+      // padding: 20px;
+      list-style: none;
+      margin-right: 50px;
+
+    }
+    a {
+      color: $color-claro;
+      @include titulos($Fuente2);
+    }
+  }
+
+	@include media(desktop-m) {
+    display: flex;
+		position: initial;
+    ul {
+      flex-direction: row;
+			gap: initial;
+			padding: 10px;
+			background: initial;
+			li {
+				// margin-right: 50px;
+				a {
+					color: $color-variacion;
+				}
+			}
+    }
+  }
 }
 
-.header__busqueda {
-	display: flex;
-	margin-left: auto;
-	padding-top: 35px;
-	&:hover {
-		text-decoration: none;
-	}
-	i {
-		font-size: 20px;
-		margin-right: 10px;
-		color: $color-secundario;
-	}
-	span {
-		color: $color-variacion;
-		@include titulos($Fuente2);	
+a.header__busqueda {
+  display: flex;
+  // display: none;
+  margin-left: auto;
+  // padding-top: 35px;
+  &:hover {
+    text-decoration: none;
+  }
+  i {
+    font-size: 20px;
+    margin-right: 10px;
+    color: $color-secundario;
+  }
+  span {
+    @include titulos($Fuente2);
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.header__menu {
+  display: flex;
+  align-items: flex-end;
+  color: $color-secundario;
+  // background: red;
+  height: auto;
+  // float: bottom;
+  &:hover + .nav--header {
+		display: flex;
+  }
+	
+	@include font-size(40px);
+  @include media(desktop-m) {
+		display: none;
 	}
 }

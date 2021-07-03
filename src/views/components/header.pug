@@ -3,12 +3,18 @@
 header.header--principal
 
 	a(href="/").logo.logo--header: img(src=ruta+"logo--header.svg")
-	nav.nav--header: ul
-		li: a(href="#") Playstation
-		li: a(href="#") Xbox
-		li: a(href="#") Nintendo
-		li: a(href="#") PC
-		li: a(href="#") Mobile
-	a(href="/search").header__busqueda
-		i.fas.fa-search
-		span Search
+	div.header__menu(id="menu")
+		i.fas.fa-bars
+	nav.nav--header
+		ul
+			li: a(href="#") Playstation
+			li: a(href="#") Xbox
+			li: a(href="#") Nintendo
+			li: a(href="#") PC
+			li: a(href="#") Mobile
+			li
+				a(href="/search").header__busqueda
+					i.fas.fa-search
+					span Search
+
+
